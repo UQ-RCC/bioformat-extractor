@@ -13,6 +13,8 @@ import bioformats.formatreader
 
 from xml.dom.minidom import parseString
 
+javabridge.start_vm(class_path=bioformats.JARS, run_headless=True)
+
 def get_good_bioformats(filepath="/home/bioformats.tsv"):
     l = dict()
     with open(filepath) as fd:
@@ -99,9 +101,8 @@ class BioformatExtractor(Extractor):
         if file_extension in self.bioformat_extensions:
             #this part handles the metadata
             try:
-                javabridge.start_vm(class_path=bioformats.JARS)
+                javabridge.attach()
                 omexmlstr=bioformats.get_omexml_metadata(inputfile)
-                javabridge.kill_vm()
                 dom = parseString(omexmlstr)
                 (__, result) = parse_element(dom)
                 logger.debug(result)
@@ -109,10 +110,10 @@ class BioformatExtractor(Extractor):
                 logger.debug(metadata)
                 # upload metadata
                 pyclowder.files.upload_metadata(connector, host, secret_key, file_id, metadata)
-
             except Exception as e:
                 logger.error("Error getting metadata from file", e)
-                javabridge.kill_vm()
+            finally:
+                javabridge.detach()
         else:
             logger.error(f"File format not supprted, Supported list:{self.bioformat_extensions}")
         
@@ -121,3 +122,4 @@ class BioformatExtractor(Extractor):
 if __name__ == "__main__":
     extractor = BioformatExtractor()
     extractor.start()
+    javabridge.kill_vm()

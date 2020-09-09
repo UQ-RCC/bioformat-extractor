@@ -1,0 +1,20 @@
+{
+  "@context": "http://clowder.ncsa.illinois.edu/contexts/extractors.jsonld",
+  "name": "bioformatextractor",
+  "version": "0.1",
+  "description": "bioformat extractor.",
+  "author": "Hoang Nguyen <uqhngu36@uq.edu.au>",
+  "contributors": [],
+  "contexts": [],
+  "repository": [],
+  "process": {
+    "file": [
+      "*"
+    ],
+    "dataset": [
+    ]
+  },
+  "external_services": [],
+  "dependencies": [],
+  "bibtex": []
+}

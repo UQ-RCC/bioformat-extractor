@@ -1,0 +1,151 @@
+Format 	Extensions 	pixels	metadata
+3i SlideBook 	.sld 	4 - Very Good 	3 - Good 
+Andor Bio-Imaging Division (ABD) TIFF 	.tif 	4 - Very Good 	4 - Very Good 
+AIM 	.aim 	3 - Good 	2 - Fair 
+Alicona 3D 	.al3d 	4 - Very Good 	4 - Very Good 
+Amersham Biosciences Gel 	.gel 	4 - Very Good 	3 - Good 
+Amira Mesh 	.am, .amiramesh, .grey, .hx, .labels 	4 - Very Good 	2 - Fair 
+Amnis FlowSight 	.cif 	3 - Good 	3 - Good 
+Analyze 7.5 	.img, .hdr 	4 - Very Good 	4 - Very Good 
+Andor SIF 	.sif 	3 - Good 	2 - Fair 
+Animated PNG 	.png 	4 - Very Good 	4 - Very Good 
+Aperio AFI 	.afi, .svs 	4 - Very Good 	4 - Very Good 
+Aperio SVS TIFF 	.svs 	4 - Very Good 	4 - Very Good 
+Applied Precision CellWorX 	.htd, .pnl 	4 - Very Good 	4 - Very Good 
+AVI (Audio Video Interleave) 	.avi 	3 - Good 	2 - Fair 
+Axon Raw Format 	.arf 	4 - Very Good 	4 - Very Good 
+BD Pathway 	.exp, .tif 	4 - Very Good 	4 - Very Good 
+Becker & Hickl SPC FIFO 	.spc 	1 - Poor 	1 - Poor 
+Becker & Hickl SPCImage 	.sdt 	4 - Very Good 	3 - Good 
+Bio-Rad Gel 	.1sc 	3 - Good 	2 - Fair 
+Bio-Rad PIC 	.pic, .raw, .xml 	5 - Outstanding 	5 - Outstanding 
+Bio-Rad SCN 	.scn 	4 - Very Good 	2 - Fair 
+Bitplane Imaris 	.ims 	4 - Very Good 	4 - Very Good 
+Bruker MRI 	  	3 - Good 	2 - Fair 
+Burleigh 	.img 	3 - Good 	2 - Fair 
+Canon DNG 	.cr2, .crw 	3 - Good 	2 - Fair 
+CellH5 	.ch5 	4 - Very Good 	5 - Outstanding 
+Cellomics 	.c01, .dib 	4 - Very Good 	4 - Very Good 
+cellSens VSI 	.vsi 	2 - Fair 	4 - Very Good 
+CellVoyager 	.xml, .tif 	4 - Very Good 	4 - Very Good 
+DeltaVision 	.dv, .r3d 	5 - Outstanding 	4 - Very Good 
+DICOM 	.dcm, .dicom 	4 - Very Good 	4 - Very Good 
+ECAT7 	.v 	3 - Good 	2 - Fair 
+EPS (Encapsulated PostScript) 	.eps, .epsi, .ps 	3 - Good 	3 - Good 
+Evotec/PerkinElmer Opera Flex 	.flex, .mea, .res 	5 - Outstanding 	5 - Outstanding 
+FEI 	.img 	2 - Fair 	1 - Poor 
+FEI TIFF 	.tiff 	4 - Very Good 	4 - Very Good 
+FITS (Flexible Image Transport System) 	.fits 	4 - Very Good 	4 - Very Good 
+Gatan Digital Micrograph 	.dm3, .dm4 	4 - Very Good 	3 - Good 
+Gatan Digital Micrograph 2 	.dm2 	3 - Good 	3 - Good 
+GIF (Graphics Interchange Format) 	.gif 	4 - Very Good 	2 - Fair 
+Hamamatsu Aquacosmos NAF 	.naf 	3 - Good 	1 - Poor 
+Hamamatsu HIS 	.his 	3 - Good 	3 - Good 
+Hamamatsu ndpi 	.ndpi, .ndpis 	2 - Fair 	2 - Fair 
+Hamamatsu VMS 	.vms 	3 - Good 	3 - Good 
+Hitachi S-4800 	.txt, .tif, .bmp, .jpg 	4 - Very Good 	4 - Very Good 
+I2I 	.i2i 	4 - Very Good 	4 - Very Good 
+ICS (Image Cytometry Standard) 	.ics, .ids 	5 - Outstanding 	5 - Outstanding 
+Imacon 	.fff 	1 - Poor 	1 - Poor 
+ImagePro Sequence 	.seq 	4 - Very Good 	2 - Fair 
+ImagePro Workspace 	.ipw 	4 - Very Good 	1 - Poor 
+IMAGIC 	.hed, .img 	4 - Very Good 	4 - Very Good 
+IMOD 	.mod 	3 - Good 	3 - Good 
+Improvision Openlab LIFF 	.liff 	4 - Very Good 	4 - Very Good 
+Improvision Openlab Raw 	.raw 	5 - Outstanding 	4 - Very Good 
+Improvision TIFF 	.tif 	4 - Very Good 	4 - Very Good 
+Imspector OBF 	.obf, .msr 	4 - Very Good 	4 - Very Good 
+InCell 1000/2000 	.xdce, .tif 	4 - Very Good 	4 - Very Good 
+InCell 3000 	.frm 	3 - Good 	2 - Fair 
+INR 	.inr 	4 - Very Good 	2 - Fair 
+Inveon 	.hdr 	4 - Very Good 	4 - Very Good 
+Ionpath MIBI 	.tif, .tiff 	4 - Very Good 	4 - Very Good 
+IPLab 	.ipl 	5 - Outstanding 	4 - Very Good 
+IVision 	.ipm 	4 - Very Good 	4 - Very Good 
+JEOL 	.dat, .img, .par 	3 - Good 	2 - Fair 
+JPEG 	.jpg 	4 - Very Good 	4 - Very Good 
+JPEG 2000 	.jp2 	4 - Very Good 	5 - Outstanding 
+JPK 	.jpk 	3 - Good 	2 - Fair 
+JPX 	.jpx 	4 - Very Good 	4 - Very Good 
+Khoros VIFF (Visualization Image File Format) Bitmap 	.xv 	3 - Good 	1 - Poor 
+Kodak BIP 	.bip 	4 - Very Good 	3 - Good 
+Lambert Instruments FLIM 	.fli 	4 - Very Good 	4 - Very Good 
+LaVision Imspector 	.msr 	2 - Fair 	1 - Poor 
+Leica LCS LEI 	.lei, .tif 	5 - Outstanding 	5 - Outstanding 
+Leica LAS AF LIF (Leica Image File Format) 	.lif 	5 - Outstanding 	5 - Outstanding 
+Leica SCN 	.scn 	3 - Good 	3 - Good 
+LEO 	.sxm 	3 - Good 	3 - Good 
+Li-Cor L2D 	.l2d, .tif, .scn 	4 - Very Good 	4 - Very Good 
+LIM (Laboratory Imaging/Nikon) 	.lim 	3 - Good 	1 - Poor 
+MetaMorph 7.5 TIFF 	.tiff 	4 - Very Good 	4 - Very Good 
+MetaMorph Stack (STK) 	.stk, .nd 	4 - Very Good 	4 - Very Good 
+MIAS (Maia Scientific) 	.tif 	4 - Very Good 	4 - Very Good 
+Micro-Manager 	.tif, .txt, .xml 	5 - Outstanding 	5 - Outstanding 
+MINC MRI 	.mnc 	4 - Very Good 	3 - Good 
+Minolta MRW 	.mrw 	4 - Very Good 	2 - Fair 
+MNG (Multiple-image Network Graphics) 	.mng 	3 - Good 	3 - Good 
+Molecular Imaging 	.stp 	3 - Good 	2 - Fair 
+MRC (Medical Research Council) 	.mrc 	5 - Outstanding 	4 - Very Good 
+NEF (Nikon Electronic Format) 	.nef, .tif 	4 - Very Good 	1 - Poor 
+NIfTI 	.img, .hdr, .nii, .nii.gz 	4 - Very Good 	4 - Very Good 
+Nikon Elements TIFF 	.tiff 	3 - Good 	3 - Good 
+Nikon EZ-C1 TIFF 	.tiff 	4 - Very Good 	4 - Very Good 
+Nikon NIS-Elements ND2 	.nd2 	4 - Very Good 	2 - Fair 
+NRRD (Nearly Raw Raster Data) 	.nrrd, .nhdr, .raw, .txt 	4 - Very Good 	4 - Very Good 
+Olympus CellR/APL 	.apl, .mtb, .tnb, .tif, .obsep 	4 - Very Good 	2 - Fair 
+Olympus FluoView FV1000 	.oib, .oif 	4 - Very Good 	4 - Very Good 
+Olympus FluoView TIFF 	.tif 	4 - Very Good 	4 - Very Good 
+Olympus OIR 	.oir 	4 - Very Good 	3 - Good 
+Olympus ScanR 	.xml, .dat, .tif 	4 - Very Good 	4 - Very Good 
+Olympus SIS TIFF 	.tiff 	3 - Good 	3 - Good 
+OME-TIFF 	.ome.tiff, .ome.tif, .ome.tf2, .ome.tf8, .ome.btf 	5 - Outstanding 	5 - Outstanding 
+OME-XML 	.ome, .ome.xml 	5 - Outstanding 	5 - Outstanding 
+OMERO Pyramid 	  	5 - Outstanding 	5 - Outstanding 
+Oxford Instruments 	.top 	3 - Good 	2 - Fair 
+PCORAW 	.pcoraw, .rec 	4 - Very Good 	4 - Very Good 
+PCX (PC Paintbrush) 	.pcx 	4 - Very Good 	2 - Fair 
+Perkin Elmer Densitometer 	.pds 	3 - Good 	3 - Good 
+PerkinElmer Columbus 	.xml, .csv, .tif 	3 - Good 	3 - Good 
+PerkinElmer Nuance 	.im3 	3 - Good 	1 - Poor 
+PerkinElmer Operetta 	.tiff, .xml 	4 - Very Good 	4 - Very Good 
+PerkinElmer UltraVIEW 	.tif, .2, .3, .4, etc. 	4 - Very Good 	3 - Good 
+PerkinElmer Vectra QPTIFF 	.tif, .qptiff 	4 - Very Good 	5 - Outstanding 
+Portable Any Map 	.pbm, .pgm, .ppm 	4 - Very Good 	4 - Very Good 
+Adobe Photoshop PSD 	.psd 	3 - Good 	3 - Good 
+Photoshop TIFF 	.tif, .tiff 	3 - Good 	3 - Good 
+PicoQuant Bin 	.bin 	3 - Good 	2 - Fair 
+PICT (Macintosh Picture) 	.pict 	4 - Very Good 	2 - Fair 
+PNG (Portable Network Graphics) 	.png 	4 - Very Good 	4 - Very Good 
+Prairie Technologies TIFF 	.tif, .xml, .cfg 	4 - Very Good 	4 - Very Good 
+Princeton Instruments SPE 	.spe 	3 - Good 	3 - Good 
+Quesant 	.afm 	3 - Good 	2 - Fair 
+QuickTime Movie 	.mov 	3 - Good 	2 - Fair 
+RHK 	.sm2, .sm3 	3 - Good 	2 - Fair 
+SBIG 	  	4 - Very Good 	4 - Very Good 
+Seiko 	.xqd, .xqf 	3 - Good 	2 - Fair 
+SimplePCI & HCImage 	.cxd 	5 - Outstanding 	5 - Outstanding 
+SimplePCI & HCImage TIFF 	.tiff 	4 - Very Good 	4 - Very Good 
+SM Camera 	  	3 - Good 	2 - Fair 
+SPIDER 	.spi, .stk 	4 - Very Good 	4 - Very Good 
+Targa 	.tga 	4 - Very Good 	4 - Very Good 
+Text 	.txt 	3 - Good 	2 - Fair 
+TIFF (Tagged Image File Format) 	.tiff, .tif, .tf2, .tf8, .btf 	4 - Very Good 	5 - Outstanding 
+TillPhotonics TillVision 	.vws 	3 - Good 	1 - Poor 
+Topometrix 	.tfr, .ffr, .zfr, .zfp, .2fl 	3 - Good 	2 - Fair 
+Trestle 	.tif, .sld, .jpg 	3 - Good 	3 - Good 
+UBM 	.pr3 	3 - Good 	2 - Fair 
+Unisoku 	.dat, .hdr 	3 - Good 	2 - Fair 
+Varian FDF 	.fdf 	3 - Good 	2 - Fair 
+Veeco AFM 	.hdf 	3 - Good 	3 - Good 
+VG SAM 	.dti 	3 - Good 	2 - Fair 
+VisiTech XYS 	.xys, .html 	4 - Very Good 	2 - Fair 
+Volocity 	.mvd2 	3 - Good 	3 - Good 
+Volocity Library Clipping 	.acff 	3 - Good 	2 - Fair 
+WA-TOP 	.wat 	3 - Good 	2 - Fair 
+Windows Bitmap 	.bmp 	4 - Very Good 	2 - Fair 
+Woolz 	.wlz 	4 - Very Good 	4 - Very Good 
+Zeiss Axio CSM 	.lms 	3 - Good 	1 - Poor 
+Zeiss AxioVision TIFF 	.xml, .tif 	4 - Very Good 	3 - Good 
+Zeiss AxioVision ZVI (Zeiss Vision Image) 	.zvi 	5 - Outstanding 	4 - Very Good 
+Zeiss CZI 	.czi 	5 - Outstanding 	5 - Outstanding 
+Zeiss LSM (Laser Scanning Microscope) 510/710 	.lsm, .mdb 	5 - Outstanding 	4 - Very Good 

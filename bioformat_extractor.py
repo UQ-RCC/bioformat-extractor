@@ -14,21 +14,27 @@ import bioformats.formatreader
 
 javabridge.start_vm(class_path=bioformats.JARS)
 
-def get_good_bioformats():
+def get_good_bioformats(filepath="/home/bioformats.tsv"):
     l = dict()
-    with open("/home/bioformats.tsv") as fd:
+    with open(filepath) as fd:
         rd = csv.reader(fd, delimiter="\t", quotechar='"')
         next(rd, None) # skip header
         for row in rd:
             _format = row[0]
-            _extensions = row[1]
+            _extensionstr = row[1]
             _pixels_quality = int(row[2].split('-')[0].strip())
             _metadata_quality = int(row[3].split('-')[0].strip())
             if _pixels_quality >= 3 and _metadata_quality >=3:
+                _exts = _extensionstr.split(',')
+                _extensions = []
+                for _ext in _exts:
+                    _ext_strip = _ext.strip()
+                    if _ext_strip != '' and _ext_strip.startswith("."):
+                        _extensions.append(_ext.strip())
                 l[_format] = _extensions
     extensions = []
     for _value in l.values():
-        extensions.extend(_value.split(','))
+        extensions.extend(_value)
     return extensions
 
 
@@ -98,6 +104,11 @@ class BioformatExtractor(Extractor):
         
 
 
-if __name__ == "__main__":
-    extractor = BioformatExtractor()
-    extractor.start()
+# if __name__ == "__main__":
+#     extractor = BioformatExtractor()
+#     extractor.start()
+#     javabridge.kill_vm()
+
+a = get_good_bioformats('bioformats.tsv')
+print(a)
+javabridge.kill_vm()

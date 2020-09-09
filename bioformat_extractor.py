@@ -11,8 +11,7 @@ import pyclowder.files
 import javabridge
 import bioformats.formatreader
 
-
-javabridge.start_vm(class_path=bioformats.JARS)
+from xml.dom.minidom import parseString
 
 def get_good_bioformats(filepath="/home/bioformats.tsv"):
     l = dict()
@@ -45,7 +44,7 @@ def get_info(obj):
     for prop_name in prop_names:
         prop_val = getattr(obj, prop_name)
         prop_val_type_name = type(prop_val).__name__
-        if prop_val_type_name in [ 'method', 'method-wrapper', 'type', 'NoneType', 'builtin_function_or_method', 'dict']:
+        if prop_val_type_name in [ 'method', 'method-wrapper', 'type', 'NoneType', 'builtin_function_or_method', 'dict', '__weakref__', '__module__', '__doc__']:
             pass
         try:
             val_as_str = json.dumps([ prop_val ], indent=2)[1:-1]
@@ -53,6 +52,26 @@ def get_info(obj):
         except:
             pass
     return attr
+
+def parse_element(element):
+    dict_data = dict()
+    if element.nodeType == element.TEXT_NODE:
+        dict_data['data'] = element.data
+    if element.nodeType not in [element.TEXT_NODE, element.DOCUMENT_NODE, 
+                                element.DOCUMENT_TYPE_NODE]:
+        for item in element.attributes.items():
+            dict_data[item[0]] = item[1]
+    if element.nodeType not in [element.TEXT_NODE, element.DOCUMENT_TYPE_NODE]:
+        for child in element.childNodes:
+            child_name, child_dict = parse_element(child)
+            if child_name in dict_data:
+                try:
+                    dict_data[child_name].append(child_dict)
+                except AttributeError:
+                    dict_data[child_name] = [dict_data[child_name], child_dict]
+            else:
+                dict_data[child_name] = child_dict 
+    return element.nodeName, dict_data
 
 class BioformatExtractor(Extractor):
     def __init__(self):
@@ -80,18 +99,10 @@ class BioformatExtractor(Extractor):
         if file_extension in self.bioformat_extensions:
             #this part handles the metadata
             try:
-                result = dict()
                 omexmlstr=bioformats.get_omexml_metadata(inputfile)
-                o=bioformats.OMEXML(omexmlstr)
-                #
-                result['Name'] = o.get_Name()
-                result['AcquisitionDate'] = o.get_AcquisitionDate()
-                result['ID'] = o.get_ID()
-                result['ns'] = o.ns
-                # pixel infor
-                pixels=o.image().Pixels()
-                result['pixel'] = get_info(pixels)
-
+                dom = parseString(omexmlstr)
+                (__, result) = parse_element(dom)
+                logger.debug(result)
                 metadata = self.get_metadata(result, 'file', file_id, host)
                 logger.debug(metadata)
                 # upload metadata
@@ -105,6 +116,7 @@ class BioformatExtractor(Extractor):
 
 
 if __name__ == "__main__":
+    javabridge.start_vm(class_path=bioformats.JARS)
     extractor = BioformatExtractor()
     extractor.start()
     javabridge.kill_vm()

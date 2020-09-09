@@ -99,7 +99,9 @@ class BioformatExtractor(Extractor):
         if file_extension in self.bioformat_extensions:
             #this part handles the metadata
             try:
+                javabridge.start_vm(class_path=bioformats.JARS)
                 omexmlstr=bioformats.get_omexml_metadata(inputfile)
+                javabridge.kill_vm()
                 dom = parseString(omexmlstr)
                 (__, result) = parse_element(dom)
                 logger.debug(result)
@@ -110,13 +112,12 @@ class BioformatExtractor(Extractor):
 
             except Exception as e:
                 logger.error("Error getting metadata from file", e)
+                javabridge.kill_vm()
         else:
             logger.error(f"File format not supprted, Supported list:{self.bioformat_extensions}")
         
 
 
 if __name__ == "__main__":
-    javabridge.start_vm(class_path=bioformats.JARS)
     extractor = BioformatExtractor()
     extractor.start()
-    javabridge.kill_vm()

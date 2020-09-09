@@ -104,11 +104,7 @@ class BioformatExtractor(Extractor):
         
 
 
-# if __name__ == "__main__":
-#     extractor = BioformatExtractor()
-#     extractor.start()
-#     javabridge.kill_vm()
-
-a = get_good_bioformats('bioformats.tsv')
-print(a)
-javabridge.kill_vm()
+if __name__ == "__main__":
+    extractor = BioformatExtractor()
+    extractor.start()
+    javabridge.kill_vm()

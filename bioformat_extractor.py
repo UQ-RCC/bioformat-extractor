@@ -16,7 +16,7 @@ javabridge.start_vm(class_path=bioformats.JARS)
 
 def get_good_bioformats():
     l = dict()
-    with open("bioformats.tsv") as fd:
+    with open("/home/bioformats.tsv") as fd:
         rd = csv.reader(fd, delimiter="\t", quotechar='"')
         next(rd, None) # skip header
         for row in rd:
@@ -63,7 +63,7 @@ class BioformatExtractor(Extractor):
         logging.getLogger('pyclowder').setLevel(logging.DEBUG)
         logging.getLogger('__main__').setLevel(logging.DEBUG)
 
-        
+
     def process_message(self, connector, host, secret_key, resource, parameters):
         # Process the file and upload the results
 

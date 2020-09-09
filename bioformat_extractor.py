@@ -14,6 +14,39 @@ import bioformats.formatreader
 
 javabridge.start_vm(class_path=bioformats.JARS)
 
+def get_good_bioformats():
+    l = dict()
+    with open("bioformats.tsv") as fd:
+        rd = csv.reader(fd, delimiter="\t", quotechar='"')
+        next(rd, None) # skip header
+        for row in rd:
+            _format = row[0]
+            _extensions = row[1]
+            _pixels_quality = int(row[2].split('-')[0].strip())
+            _metadata_quality = int(row[3].split('-')[0].strip())
+            if _pixels_quality >= 3 and _metadata_quality >=3:
+                l[_format] = _extensions
+    extensions = []
+    for _value in l.values():
+        extensions.extend(_value.split(','))
+    return extensions
+
+
+def get_info(obj):
+    attr = dict()
+    type_name = type(obj).__name__
+    prop_names = dir(obj)
+    for prop_name in prop_names:
+        prop_val = getattr(obj, prop_name)
+        prop_val_type_name = type(prop_val).__name__
+        if prop_val_type_name in [ 'method', 'method-wrapper', 'type', 'NoneType', 'builtin_function_or_method', 'dict']:
+            pass
+        try:
+            val_as_str = json.dumps([ prop_val ], indent=2)[1:-1]
+            attr[prop_name] = val_as_str.strip()
+        except:
+            pass
+    return attr
 
 class BioformatExtractor(Extractor):
     def __init__(self):
@@ -30,41 +63,7 @@ class BioformatExtractor(Extractor):
         logging.getLogger('pyclowder').setLevel(logging.DEBUG)
         logging.getLogger('__main__').setLevel(logging.DEBUG)
 
-    @staticmethod
-    def get_info(obj):
-        attr = dict()
-        type_name = type(obj).__name__
-        prop_names = dir(obj)
-        for prop_name in prop_names:
-            prop_val = getattr(obj, prop_name)
-            prop_val_type_name = type(prop_val).__name__
-            if prop_val_type_name in [ 'method', 'method-wrapper', 'type', 'NoneType', 'builtin_function_or_method', 'dict']:
-                pass
-            try:
-                val_as_str = json.dumps([ prop_val ], indent=2)[1:-1]
-                attr[prop_name] = val_as_str.strip()
-            except:
-                pass
-        return attr
-    
-    @staticmethod
-    def get_good_bioformats():
-        l = dict()
-        with open("bioformats.tsv") as fd:
-            rd = csv.reader(fd, delimiter="\t", quotechar='"')
-            next(rd, None) # skip header
-            for row in rd:
-                _format = row[0]
-                _extensions = row[1]
-                _pixels_quality = int(row[2].split('-')[0].strip())
-                _metadata_quality = int(row[3].split('-')[0].strip())
-                if _pixels_quality >= 3 and _metadata_quality >=3:
-                    l[_format] = _extensions
-        extensions = []
-        for _value in l.values():
-            extensions.extend(_value.split(','))
-        return extensions
-
+        
     def process_message(self, connector, host, secret_key, resource, parameters):
         # Process the file and upload the results
 

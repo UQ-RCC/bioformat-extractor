@@ -9,15 +9,27 @@
     {
     }
   ],
-  "repository": [],
+  "repository": [
+    {
+      "repType": "git",
+      "repUrl": "https://github.com/UQ-RCC/bioformat-extractor.git"
+    },
+    {
+      "repType": "docker",
+      "repUrl": "uqrcc/bioformat-extractor"
+    }
+  ],
   "process": {
     "file": [
-      "*"
+      "*/*"
     ],
     "dataset": [
     ]
   },
   "external_services": [],
   "dependencies": [],
-  "bibtex": []
+  "bibtex": [],
+  "labels": [
+    "Type/Any"
+  ]
 }

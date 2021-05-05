@@ -85,7 +85,7 @@ MINC MRI 	.mnc 	4 - Very Good 	3 - Good
 Minolta MRW 	.mrw 	4 - Very Good 	2 - Fair 
 MNG (Multiple-image Network Graphics) 	.mng 	3 - Good 	3 - Good 
 Molecular Imaging 	.stp 	3 - Good 	2 - Fair 
-MRC (Medical Research Council) 	.mrc 	5 - Outstanding 	4 - Very Good 
+MRC (Medical Research Council) 	.mrc, .st, .ali, .map, .rec, .mrcs  	5 - Outstanding 	4 - Very Good 
 NEF (Nikon Electronic Format) 	.nef, .tif 	4 - Very Good 	1 - Poor 
 NIfTI 	.img, .hdr, .nii, .nii.gz 	4 - Very Good 	4 - Very Good 
 Nikon Elements TIFF 	.tiff 	3 - Good 	3 - Good 

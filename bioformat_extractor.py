@@ -9,6 +9,7 @@ from pyclowder.extractors import Extractor
 import pyclowder.files
 
 import javabridge
+import bioformats
 import bioformats.formatreader
 
 from xml.dom.minidom import parseString
@@ -102,14 +103,20 @@ class BioformatExtractor(Extractor):
             #this part handles the metadata
             try:
                 javabridge.attach()
-                omexmlstr=bioformats.get_omexml_metadata(inputfile)
-                dom = parseString(omexmlstr)
-                (__, result) = parse_element(dom)
-                logger.debug(result)
-                metadata = self.get_metadata(result, 'file', file_id, host)
-                logger.debug(metadata)
-                # upload metadata
-                pyclowder.files.upload_metadata(connector, host, secret_key, file_id, metadata)
+                omexmlstr = bioformats.get_omexml_metadata(inputfile)
+                if omexmlstr:
+                    dom = parseString(omexmlstr)
+                    if dom:
+                        (__, result) = parse_element(dom)
+                        logger.debug(result)
+                        metadata = self.get_metadata(result, 'file', file_id, host)
+                        logger.debug(metadata)
+                        # upload metadata
+                        pyclowder.files.upload_metadata(connector, host, secret_key, file_id, metadata)
+                    else:
+                        logger.debug("Cannot parse xml")    
+                else:
+                    logger.debug("Bioformat cannot read the file")
             except Exception as e:
                 logger.error("Error getting metadata from file", e)
             finally:
